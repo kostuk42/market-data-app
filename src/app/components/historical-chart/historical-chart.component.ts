@@ -2,7 +2,6 @@ import { Component, Input, OnChanges, OnInit, ViewChild } from '@angular/core';
 import { RestApiService } from '../../services/rest-api.service';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { CHART_DATA } from '../../constants/constants';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { ApexAxisChartSeries, ApexChart, ApexXAxis, ApexYAxis, ApexTitleSubtitle, ApexDataLabels, ChartComponent } from 'ng-apexcharts';
 
