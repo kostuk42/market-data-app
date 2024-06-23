@@ -25,7 +25,6 @@
     "chart.js": "^4.4.3",
     "chartjs-adapter-date-fns": "^3.0.0",
     "chartjs-chart-financial": "^0.2.1",
-    "cors-anywhere": "^0.4.4",
     "ng-apexcharts": "^1.11.0",
     "ngx-chartjs": "^0.0.1",
     "rxjs": "~7.8.0",

@@ -70,9 +70,7 @@ export class RealTimePriceComponent implements OnInit, OnChanges {
   
   subscribe(): void {
     const { instrument, provider } = this.form.value;
-    console.log("instrument", instrument)
     const token = this.restApiService.getToken();
-    console.log("token", token)
     
     this.websocketService.connect(token)
     .pipe(
