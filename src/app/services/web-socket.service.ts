@@ -80,7 +80,7 @@ export class WebsocketService implements IWebsocketService {
   public connect(token: string): Observable<void> {
     this.token = token;  
     const webSocketUrl = `${environment.wsURL}${token}`;
-
+    console.log('Connecting to WebSocket: ' + webSocketUrl);
     return new Observable<void>((observer) => {
         if (!this.websocket$ || this.websocket$.closed) {
             console.log('Connecting to WebSocket: ' + webSocketUrl);

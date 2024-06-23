@@ -6,7 +6,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { WebsocketService, WS_CONFIG, WebSocketConfig } from '../../services/web-socket.service';
 import { RestApiService } from '../../services/rest-api.service';
-import { SocketService } from '../../services/socket.service';
 import { Observable, of, switchMap } from 'rxjs';
 import { PROVIDERS, SUBSCRIPTION_EXAMPLE } from '../../constants/constants';
 
@@ -33,8 +32,7 @@ export class RealTimePriceComponent implements OnInit, OnChanges {
     private fb: FormBuilder,
     private restApiService: RestApiService,
     @Inject(WS_CONFIG) private wsConfig: WebSocketConfig,
-    private websocketService: WebsocketService,
-    public socketService: SocketService
+    private websocketService: WebsocketService
   ) {
     this.form = this.fb.group({
       instrument: [''],
