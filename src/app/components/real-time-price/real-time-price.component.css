@@ -1,0 +1,51 @@
+.market-data {
+    padding: 16px;
+    margin: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .price-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    border: 1px solid black; 
+    border-radius: 8px;
+  }
+  
+  .price-info > div {
+    margin: 4px 0;
+    min-width: 150px;
+  }
+  .subscribe-button {
+    font: Roboto, sans-serif;
+    font-size: 16px ;
+    padding: 16px 16px;
+    letter-spacing: 0.496px;
+    margin-left: 16px;
+    margin-bottom: 16px;
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+
+  .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .provider-input{
+    margin-left: 16px;
+  }
+
+  .title{
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+
+  .insrument-input{
+    width: 200px;
+  }

@@ -1,0 +1,39 @@
+<!-- <div> -->
+    <form [formGroup]="form" class="container">
+      <mat-form-field appearance="outline" class="insrument-input">
+        <mat-label>Instrument</mat-label>
+        <mat-select formControlName="instrument">
+          <mat-option *ngFor="let instrument of instruments" [value]="instrument.id">
+            {{ instrument.symbol }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline" class="provider-input">
+        <mat-label>Provider</mat-label>
+        <mat-select formControlName="provider">
+          <mat-option *ngFor="let provider of providers" [value]="provider">
+            {{ provider }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <button class="subscribe-button" type="button" (click)="subscribe()">Subscribe</button>
+    </form>
+
+    <div class="title">
+        Market Data
+    </div>
+    
+    <div class="price-info" *ngIf="time">
+    <div>Symbol: {{symbol}}</div>
+      <div>Price: {{price}}</div>
+      <div>Time: {{time}}</div>
+    </div>
+
+    <div class="price-info" *ngIf="!time">
+        <div>No data to display</div>
+    </div>
+
+<!-- </div> -->
+  
