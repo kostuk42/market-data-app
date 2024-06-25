@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Inject, Input, OnChanges, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
@@ -16,7 +16,7 @@ import { PROVIDERS, SUBSCRIPTION_EXAMPLE } from '../../constants/constants';
   templateUrl: './real-time-price.component.html',
   styleUrls: ['./real-time-price.component.css']
 })
-export class RealTimePriceComponent implements OnInit, OnChanges {
+export class RealTimePriceComponent implements OnInit, OnChanges, OnDestroy {
   symbol!: string | null;  
   price!: number | null;
   time!: string | null;
@@ -100,5 +100,8 @@ export class RealTimePriceComponent implements OnInit, OnChanges {
     return this.currentSuscription ? this.websocketService.sendMessage({...this.currentSuscription, subscribe: false}) : of(null);
   }
 
+  ngOnDestroy(): void {
+    this.unsubscribe().subscribe();
+  }
 
 }

@@ -21,7 +21,6 @@ import { AuthService } from './services/auth.service'; // Import the AuthService
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-    
   title = 'Market Data App';
   instruments = [];
   chartData = [];
